@@ -5,7 +5,8 @@ import fs from "fs";
 import { Client } from "@gradio/client";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+
 
 // Set up multer for file uploads
 const upload = multer({ dest: "images/" });
